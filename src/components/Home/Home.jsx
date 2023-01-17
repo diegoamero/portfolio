@@ -3,6 +3,7 @@ import {Link} from 'react-router-dom'
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters'
 import LogoTitle from '../../assets/images/logo-s.png'
 import './Home.scss'
+import Logo from './Logo/Logo'
 
 function Home() {
   //default animation
@@ -25,7 +26,7 @@ function Home() {
                 <br/>
                 <span className={`${letterClass} _13`}>I</span>
                 <span className={`${letterClass} _14`}>'m</span>
-                <img src={LogoTitle} alt='developer'/>
+                <img className='developer' src={LogoTitle} alt='developer'/>
                 <AnimatedLetters letterClass={letterClass}
                 strArray={nameArray}
                 idx={15}
@@ -39,6 +40,7 @@ function Home() {
             <h2>Frontend Developer / Javascript Expert</h2>
             <Link className='flat-button' to='/contact'>CONTACT ME</Link>
         </div>
+        <Logo/>
     </div>
   )
 }
